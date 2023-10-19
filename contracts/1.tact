@@ -20,11 +20,11 @@ contract Task1 with Deployable {
     init(){
         self.counter = 0;
     }
- // summation
+
     receive(msg: Add){
         self.counter = self.counter + msg.number;
     }
-// subtraction
+
     receive(msg: Subtract){
         self.counter = self.counter - msg.number;
     }
@@ -32,3 +32,4 @@ contract Task1 with Deployable {
     get fun counter(): Int {
         return self.counter;
     }
+}
